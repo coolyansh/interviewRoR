@@ -1,0 +1,13 @@
+<h1>Participant details</h1>
+
+<ul>
+  <% @participants.each do |participant| %>
+    <%= link_to participant_path(participant) do %>
+      <li>
+        <%= participant.name %> --- <%= participant.role %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to Home', root_path %>

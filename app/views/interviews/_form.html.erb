@@ -1,0 +1,42 @@
+<%= form_with model: @interview, local: true, html: { multipart: true } do |form| %>
+
+  <% if @interview.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@interview.errors.count, "error") %> prohibited
+        this interview from being created:
+      </h2>
+      <ul>
+        <% @interview.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :start_time %><br>
+    <%= form.datetime_local_field :start_time %>
+  </p>
+
+  <p>
+    <%= form.label :end_time %><br>
+    <%= form.datetime_local_field :end_time %>
+  </p>
+
+  <p>
+    <%= form.label :interviewer_id %><br>
+    <%= form.select(:interviewer_id,options_for_select(@interviewers)) %>
+  </p>
+
+  <p>
+    <%= form.label :interviewee_id %><br>
+    <%= form.select(:interviewee_id,options_for_select(@interviewees)) %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+  <br>
+<% end %>

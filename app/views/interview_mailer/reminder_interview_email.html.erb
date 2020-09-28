@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h3>This is a reminder for an interview you have scheduled after 30 minutes.</h3>
+    <h4>Here are the details of your interview :</h4>
+    <p>
+      Interviewer : <%= @interview.interviewer.name %><br>
+      Interviewee : <%= @interview.interviewee.name %><br>
+      Start time : <%= @interview.start_time %><br>
+      End time : <%= @interview.end_time %><br>
+    </p>Please be ready for your interview.<p>
+    </p>
+  </body>
+</html>

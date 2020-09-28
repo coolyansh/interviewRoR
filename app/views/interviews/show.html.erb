@@ -1,0 +1,12 @@
+<h4>Interview Details</h4>
+
+<p>
+  Interviewer : <%= @interview.interviewer.name %><br>
+  Interviewee : <%= @interview.interviewee.name %><br>
+  Start time : <%= @interview.start_time.strftime("%D %H:%M") %><br>
+  End time : <%= @interview.end_time.strftime("%D %H:%M") %><br>
+</p>
+
+<%= link_to 'Edit', edit_interview_path(@interview) %><br>
+<%= link_to 'Delete', interview_path(@interview), method: :delete, data: { confirm: 'Are you sure ?' } %><br>
+<%= link_to 'Back to Interviews', interviews_path %>

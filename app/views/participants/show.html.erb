@@ -1,0 +1,26 @@
+<h4>Participant Details</h4>
+
+<p>
+  <strong>Name :</strong>
+  <%= @participant.name %>
+</p>
+
+<p>
+  <strong>Email :</strong>
+  <%= @participant.email %>
+</p>
+
+<p>
+  <strong>Role :</strong>
+  <%= @participant.role %>
+</p>
+
+<% if @participant.role == "Interviewee" %>
+<a href="<%= @participant.resume %>">Resume</a>
+<% end %>
+
+<p>
+  <%= link_to 'Back To Participants', participants_path %><br>
+  <%= link_to 'Edit', edit_participant_path(@participant) %>
+  <%= link_to 'Delete', participant_path(@participant), method: :delete, data: { confirm: 'Are you sure ?' } %>
+</p>

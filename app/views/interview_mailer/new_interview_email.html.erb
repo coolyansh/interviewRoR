@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h3>Your interview has been scheduled successfully.</h3>
+    <h4>Here are the details of your interview :</h4>
+    <p>
+      Interviewer : <%= @interview.interviewer.name %><br>
+      Interviewee : <%= @interview.interviewee.name %><br>
+      Start time : <%= @interview.start_time %><br>
+      End time : <%= @interview.end_time %><br>
+    </p>
+  </body>
+</html>

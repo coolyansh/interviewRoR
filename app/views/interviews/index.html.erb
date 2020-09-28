@@ -1,0 +1,18 @@
+<h1>Interview list</h1>
+
+<ul>
+  <% @interviews.each do |interview| %>
+      <li>
+        <%= link_to interview_path(interview) do %>
+        <p>
+          Interviewer :<%= interview.interviewer.name %><br>
+          Interviewee :<%= interview.interviewee.name %><br>
+        </p>
+        <% end %>
+        <%= link_to 'Edit', edit_interview_path(interview) %><br>
+        <%= link_to 'Delete', interview_path(interview), method: :delete, data: { confirm: 'Are you sure ?' } %>
+      </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to Home', root_path %>
