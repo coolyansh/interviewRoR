@@ -1,24 +1,13 @@
-# README
+A basic interview scheduler site with the following functionalities:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* CRUD options for participant
+* CRUD options for interviews between participants
+* Mail alerts and reminders to participants for each interview.
 
-Things you may want to cover:
+Ruby version : 2.6.6
+Rails version : 5.1.7
+MySql version : 5.7.9
+Redis version : 4.0.14
+Sidekiq version : 6.1.2
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Done as an assignment project.
